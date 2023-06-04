@@ -11,17 +11,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Controller controller = Get.put(Controller());
     return MaterialApp(
       home: Scaffold(
         appBar: AppBar(title: const Text('getx sample')),
         body: Center(
           child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             GetBuilder<Controller>(
-                builder: (_) => Text('current value : ${controller.x}')),
+                init: Controller(),
+                builder: (_) =>
+                    Text('current value : ${Get.find<Controller>().x}')),
             ElevatedButton(
                 onPressed: () {
-                  controller.increment();
+                  Get.find<Controller>().increment();
                 },
                 child: const Text('Add button'))
           ]),
