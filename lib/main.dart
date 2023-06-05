@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getx_practice/view/shopping_page.dart';
+import 'package:getx_practice/view/mypage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ShoppingPage(),
+      home: MyPage(),
     );
   }
 }
